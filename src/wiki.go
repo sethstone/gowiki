@@ -1,6 +1,6 @@
 package main
 import(
-		//"fmt"
+		"fmt"
 		"io/ioutil"
 )
 
@@ -25,4 +25,9 @@ func loadPage(title string) (*Page, error){
 
 func main(){
 	p1 := &Page{Title: "TestPage", Body: []byte("This is a sample Page.")}
+	p1.save()
+	p2,err := loadPage("TestPage")
+	if err != nil {
+		fmt.Println(string(p2.Body))
+	}
 }
