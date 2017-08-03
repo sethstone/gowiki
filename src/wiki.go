@@ -1,1 +1,2 @@
-Don't know what _GO_es here.
+package main
+func main(){}
